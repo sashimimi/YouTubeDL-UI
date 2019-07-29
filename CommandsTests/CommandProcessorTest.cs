@@ -5,7 +5,7 @@ using YouTubeDL_UI;
 namespace CommandsTests
 {
     [TestClass]
-    public class CommandsTest
+    public class CommandProcessorTest
     {
         [TestMethod]
         public void OpenCommandPromptTest()
