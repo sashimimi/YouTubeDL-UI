@@ -61,6 +61,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHandler.cs" />
     <EmbeddedResource Include="frmMetadata.resx">
       <DependentUpon>frmMetadata.cs</DependentUpon>
     </EmbeddedResource>
