@@ -17,5 +17,18 @@ namespace YouTubeDL_UI
         {
             InitializeComponent();
         }
+
+        private void frmDownload_Load(object sender, EventArgs e)
+        {
+            String path = Application.StartupPath.ToString(); //returns file path of the executable
+
+            if (!File.Exists(path + "\ffmpeg.exe") && !File.Exists(path + "\\youtube-dl.exe"))
+            {
+                MessageBox.Show("Dependencies missing.\n\n" +
+                    "Please ensure you have \"ffmpeg.exe\" and \"youtube-dl.exe\" in the current folder directory.",
+                    "YouTubeDL-UI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+        }
     }
 }

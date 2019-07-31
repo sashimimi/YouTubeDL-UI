@@ -41,7 +41,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 25);
+            this.label1.Size = new System.Drawing.Size(158, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "&Enter YouTube URL:";
             // 
@@ -49,7 +49,7 @@
             // 
             this.txtURL.Location = new System.Drawing.Point(211, 19);
             this.txtURL.Name = "txtURL";
-            this.txtURL.Size = new System.Drawing.Size(258, 26);
+            this.txtURL.Size = new System.Drawing.Size(258, 23);
             this.txtURL.TabIndex = 1;
             // 
             // chkMetadata
@@ -58,7 +58,7 @@
             this.chkMetadata.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkMetadata.Location = new System.Drawing.Point(171, 64);
             this.chkMetadata.Name = "chkMetadata";
-            this.chkMetadata.Size = new System.Drawing.Size(143, 24);
+            this.chkMetadata.Size = new System.Drawing.Size(123, 21);
             this.chkMetadata.TabIndex = 2;
             this.chkMetadata.Text = "Add &Metadata?";
             this.chkMetadata.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // frmDownload
             // 
             this.AcceptButton = this.btnDownload;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 151);
             this.Controls.Add(this.txtExit);
@@ -97,6 +97,7 @@
             this.Name = "frmDownload";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YouTubeDL-UI";
+            this.Load += new System.EventHandler(this.frmDownload_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
