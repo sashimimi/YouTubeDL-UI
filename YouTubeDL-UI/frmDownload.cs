@@ -13,6 +13,8 @@ namespace YouTubeDL_UI
 {
     public partial class frmDownload : Form
     {
+        private DownloadUI logic = new DownloadUI();
+
         public frmDownload()
         {
             InitializeComponent();
@@ -20,15 +22,30 @@ namespace YouTubeDL_UI
 
         private void frmDownload_Load(object sender, EventArgs e)
         {
-            String path = Application.StartupPath.ToString(); //returns file path of the executable
+            string path = Application.StartupPath.ToString(); //returns file path of the executable
+            List<string> dependencies = new List<string>() {"\\ffmpeg.exe", "\\youtube-dl.exe"};
 
-            if (!File.Exists(path + "\ffmpeg.exe") && !File.Exists(path + "\\youtube-dl.exe"))
+            try
+            {
+                logic.CheckDependencies(path, dependencies);
+            }
+            catch (FileNotFoundException)
             {
                 MessageBox.Show("Dependencies missing.\n\n" +
                     "Please ensure you have \"ffmpeg.exe\" and \"youtube-dl.exe\" in the current folder directory.",
                     "YouTubeDL-UI", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
+        }
+
+        private void btnDownload_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

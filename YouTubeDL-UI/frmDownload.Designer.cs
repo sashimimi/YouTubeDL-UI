@@ -71,6 +71,7 @@
             this.btnDownload.TabIndex = 3;
             this.btnDownload.Text = "&Download";
             this.btnDownload.UseVisualStyleBackColor = true;
+            this.btnDownload.Click += new System.EventHandler(this.btnDownload_Click);
             // 
             // txtExit
             // 
@@ -80,6 +81,7 @@
             this.txtExit.TabIndex = 4;
             this.txtExit.Text = "&Exit";
             this.txtExit.UseVisualStyleBackColor = true;
+            this.txtExit.Click += new System.EventHandler(this.txtExit_Click);
             // 
             // frmDownload
             // 
