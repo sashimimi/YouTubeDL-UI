@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeDL-UI", "YouTubeDL-UI\YouTubeDL-UI.csproj", "{580F7FF8-D0F2-4A02-8056-CA347622E504}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeDL-UI-Test", "CommandsTests\YouTubeDL-UI-Test.csproj", "{E8005286-51F7-4D96-965F-981BD4DCFDC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouTubeDL-UI-Test", "YouTubeDL-UI-Test\YouTubeDL-UI-Test.csproj", "{E8005286-51F7-4D96-965F-981BD4DCFDC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
