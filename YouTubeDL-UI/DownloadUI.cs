@@ -19,5 +19,18 @@ namespace YouTubeDL_UI
                 }
             }
         }
+
+        public bool CheckIfEmpty(string str)
+        {
+            if (str == "")
+                return true;
+            else
+                return false;
+        }
+
+        public void Download(string url)
+        {
+            CommandProcessor.OpenCommandPrompt("cmd.exe", "/C youtube-dl -x --audio-format mp3 " + url);
+        }
     }
 }

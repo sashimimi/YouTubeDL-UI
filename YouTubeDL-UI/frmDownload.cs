@@ -40,7 +40,26 @@ namespace YouTubeDL_UI
 
         private void btnDownload_Click(object sender, EventArgs e)
         {
+            string url = txtURL.Text.Trim();
 
+            if (logic.CheckIfEmpty(url))
+            {
+                MessageBox.Show("URL empty.\n\n" +
+                    "Please input a valid YouTube URL.",
+                    "YouTubeDL-UI", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                logic.Download(url);
+
+                if (chkMetadata.Checked)
+                {
+                    frmMetadata metadata = new frmMetadata();
+                    metadata.ShowDialog();
+                }
+                else
+                    this.Close();
+            }
         }
 
         private void txtExit_Click(object sender, EventArgs e)

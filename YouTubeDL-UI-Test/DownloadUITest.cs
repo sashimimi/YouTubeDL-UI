@@ -27,5 +27,32 @@ namespace CommandsTests
             DownloadUI testlogic = new DownloadUI();
             Assert.ThrowsException<System.IO.FileNotFoundException>(() => testlogic.CheckDependencies(testpath, testDependencies));
         }
+
+        [TestMethod]
+        public void CheckIfEmptyTrueTest()
+        {
+            string str = "";
+
+            DownloadUI testlogic = new DownloadUI();
+            Assert.IsTrue(testlogic.CheckIfEmpty(str));
+        }
+
+        [TestMethod]
+        public void CheckIfEmptyFalseTest()
+        {
+            string str = "test";
+
+            DownloadUI testlogic = new DownloadUI();
+            Assert.IsFalse(testlogic.CheckIfEmpty(str));
+        }
+
+        [TestMethod]
+        public void DownloadTest()
+        {
+            string testURL = "https://www.youtube.com/watch?v=J---aiyznGQ";
+
+            DownloadUI testlogic = new DownloadUI();
+            testlogic.Download(testURL);
+        }
     }
 }
